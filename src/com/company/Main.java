@@ -4,10 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int ticketPrice = 110; // стоимость билета
-        int bonusMile = 20; // количество рублей на одну бонусную милю
-        int numberBonusMiles = (ticketPrice / bonusMile); // количество бонусных миль за один билет
+        BonusMilesService service = new BonusMilesService();
+        int price = 110;
+        int miles = service.calculate(price);
+        System.out.println(miles);
 
-        System.out.println("количество бонусных миль за один билет: " + numberBonusMiles);
     }
 }
